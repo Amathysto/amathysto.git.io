@@ -12,6 +12,9 @@
         <script>
             var song = document.currentScript.parentElement;
             song.volume = 0.12;
+			document.addEventListener("click", () => {
+				song.play();
+			});
         </script>
     </audio>
 
