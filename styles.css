@@ -65,3 +65,43 @@ html {
   font-family: myFirstFont;
   src: url(hacked.ttf);
 }
+
+h1 {
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  font-weight: 900;
+  text-decoration: none;
+  color: #0f0;
+  display: inline-block;
+  background-size: 120% 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -ms-background-clip: text;
+  background-clip: text;
+  animation: 1s shake infinite alternate;
+}
+p {
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  font-weight: 900;
+  text-decoration: none;
+  color: #0f0;
+  display: inline-block;
+  background-size: 120% 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -ms-background-clip: text;
+  background-clip: text;
+  animation: 1s shake infinite alternate;
+}
+
+@keyframes shake {
+  0% { transform: skewX(-10deg); }
+  5% { transform: skewX(10deg); }
+  10% { transform: skewX(-10deg); }
+  15% { transform: skewX(10deg); }
+  20% { transform: skewX(0deg); }
+  100% { transform: skewX(0deg); }  
+}
