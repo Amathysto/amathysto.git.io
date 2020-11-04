@@ -4,7 +4,13 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-	<embed src="song.mp3" loop="true" autostart="true" width="2" height="0">
+<audio autoplay="" loop="">
+  <source src="song.mp3">
+  <script>
+    var song = document.currentScript.parentElement;
+    song.volume = 0.12;
+  </script>
+</audio>
     <h1>Amathyst</h1>
     <p>I'm amathysts website, Not much here, is there?. Time to learn.</p>  
     <div id="particles-js"></div>
