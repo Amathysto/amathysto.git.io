@@ -13,8 +13,13 @@ body {
   background-repeat: no-repeat;
 }
 
+html {
+  font-family: sans-serif;
+  font-color: white;
+}
+
   canvas{
   display:block;
   vertical-align:bottom;
-}
+
 
