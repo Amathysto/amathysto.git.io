@@ -2,4 +2,14 @@ body {
   background: url(https://i.redd.it/cds3jce9zf851.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+
+  #particles-js{
+  width: 100%;
+  height: 100%;
+  background-color: #b61924;
+  background-image: url('');
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
 }
