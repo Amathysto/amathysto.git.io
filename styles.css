@@ -2,6 +2,9 @@ body {
   background-image: url("https://i.redd.it/cds3jce9zf851.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  margin: 0;
+  border: 0;
+  padding: 0;
 }
 
 #particles-js {
@@ -17,13 +20,34 @@ body {
   background-repeat: no-repeat;
 }
 
+	#intro {
+	background-color:#0008;
+	position: absolute;
+	margin: 0;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 50%;
+	height: 120px;
+	text-align: center;
+	}
+/*
+	#intro >* {
+	  font-family: myFirstFont;
+	  color: #0f0;
+}
+*/
 html {
-  font-family: sans-serif;
-  font-color: white;
+  font-family: myFirstFont;
+  color: #0f0;
 }
 
   canvas{
   display:block;
   vertical-align:bottom;
+}
 
-
+  @font-face {
+  font-family: myFirstFont;
+  src: url(hacked.ttf);
+}
