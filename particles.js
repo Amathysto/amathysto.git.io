@@ -9,6 +9,18 @@
 
 var pJS = function(tag_id, params){
 
+  var oogabooga = new Image;
+  var devtoolsOpen = false;
+  
+  var particleColorDev = hexToRgb('#FF0000');
+  var lineColorDev = hexToRgb('#DC143C');
+
+  var inspect_cls = document.getElementsByClassName('inspect');
+
+  oogabooga.__defineGetter__("id", function() {
+      devtoolsOpen = true;
+  });
+
   var canvas_el = document.querySelector('#'+tag_id+' > .particles-js-canvas-el');
 
   /* particles.js variables with default values */
@@ -504,11 +516,35 @@ var pJS = function(tag_id, params){
   };
 
   pJS.fn.particlesUpdate = function(){
+    
+    let devtoolsPre = devtoolsOpen;
+    // devtoolsOpen = false;
+    console.log(oogabooga);
+    let devChange = (devtoolsPre != devtoolsOpen);
+
+    let devLine =  devtoolsOpen ? lineColorDev : pJS.particles.line_linked.color_rgb_line;
+    // if (devtoolsOpen) {
+    //     pJS.particles.line_linked.color_rgb_line = hexToRgb('#FFFFFF');
+    // }
+
+    for (var i = 0; i < inspect_cls.length; i++) {
+        if (devtoolsOpen) {
+            inspect_cls[i].style.display = 'block';
+        }
+        else {
+            inspect_cls[i].style.display = 'none';
+        }
+    }
 
     for(var i = 0; i < pJS.particles.array.length; i++){
 
+
       /* the particle */
       var p = pJS.particles.array[i];
+      
+      if (devtoolsOpen) {
+          p.color.rgb = particleColorDev;
+      }
 
       // var d = ( dx = pJS.interactivity.mouse.click_pos_x - p.x ) * dx + ( dy = pJS.interactivity.mouse.click_pos_y - p.y ) * dy;
       // var f = -BANG_SIZE / d;
@@ -613,7 +649,7 @@ var pJS = function(tag_id, params){
 
           /* link particles */
           if(pJS.particles.line_linked.enable){
-            pJS.fn.interact.linkParticles(p,p2);
+            pJS.fn.interact.linkParticles(p,p2,devLine);
           }
 
           /* attract particles */
@@ -633,6 +669,7 @@ var pJS = function(tag_id, params){
     }
 
   };
+
 
   pJS.fn.particlesDraw = function(){
 
@@ -673,7 +710,7 @@ var pJS = function(tag_id, params){
 
   /* ---------- pJS functions - particles interaction ------------ */
 
-  pJS.fn.interact.linkParticles = function(p1, p2){
+  pJS.fn.interact.linkParticles = function(p1, p2, p3){
 
     var dx = p1.x - p2.x,
         dy = p1.y - p2.y,
@@ -687,7 +724,7 @@ var pJS = function(tag_id, params){
       if(opacity_line > 0){        
         
         /* style */
-        var color_line = pJS.particles.line_linked.color_rgb_line;
+        var color_line = p3;
         pJS.canvas.ctx.strokeStyle = 'rgba('+color_line.r+','+color_line.g+','+color_line.b+','+opacity_line+')';
         pJS.canvas.ctx.lineWidth = pJS.particles.line_linked.width;
         //pJS.canvas.ctx.lineCap = 'round'; /* performance issue */

@@ -1,5 +1,5 @@
 body {
-  background-image: url("https://i.imgur.com/j3krM6o.jpg");
+  background-image: url("https://i.imgur.com/njBuNaE.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   margin: 0;
@@ -42,7 +42,22 @@ body {
 	width: 30%;
 	height: 120px;
 	text-align: center;
-	}
+  }
+  
+  .inspect {
+  background-color:rgba(0, 0, 0, 0);
+  position: absolute;
+  margin: 0;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 120px;
+  text-align: center;
+  text-color: red;
+  font-size: 30px;
+  }
+
 
 
 /*
@@ -66,11 +81,12 @@ html {
   src: url(hacked.ttf);
 }
 
-h1 {
+h1 p {
   position: relative;
   text-transform: uppercase;
   letter-spacing: 6px;
   font-weight: 900;
+  font-size: 9px
   text-decoration: none;
   color: #0f0;
   display: inline-block;
@@ -81,20 +97,9 @@ h1 {
   background-clip: text;
   animation: 1s shake infinite alternate;
 }
-p {
-  position: relative;
-  text-transform: uppercase;
-  letter-spacing: 6px;
-  font-weight: 900;
-  text-decoration: none;
-  color: #0f0;
-  display: inline-block;
-  background-size: 120% 100%;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -ms-background-clip: text;
-  background-clip: text;
-  animation: 1s shake infinite alternate;
+
+h2 {
+  color: red;
 }
 
 @keyframes shake {
