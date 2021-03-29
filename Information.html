@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="information.css">
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+	<title>Crystal Squad</title>
+	
+  </head>
+  <style>
+	*{padding:0;margin:0}
+	html{overflow:hidden}
+  </style>
+  <body oncontextmenu="return false"> 
+  <!--
+      <p>
+	  What do you think you're doing looking back here huh? What's your business in snoopin around in ma stuff?
+	  Hm, I'm just kinda curious what made you have the thought process to come back here anyway. If you're really
+	  that curious on how I made the website, just look up some youtube tutorials, its not that hard.
+
+	  Unless you were just looking for a friend, then that can be arranged.. maybe.
+	  You wouldn't go around some secret national agency looking around for some secrets would you now? Preferably,
+	  stop snoopin' around. I got business and research that needs to be done.
+	  
+	  - 4m47hy57. 
+
+	  </p> 
+  -->
+    <iframe id="audio" name="audio" src="silence.html" style="display:none"></iframe>
+
+	<style type="text/css">
+		body {
+			overflow: hidden;
+		}
+		canvas {
+			position: fixed;
+			top: 0;
+			left: 0;
+		}
+    </style>   
+    
+	<canvas id="canvas" style="background:#111" width="1880" height="939"></canvas>
+
+	<script type="text/javascript">
+		
+		window.onload = function(){
+			
+			var canvas = document.getElementById("canvas");
+			
+			var context =canvas.getContext("2d");
+			
+			var W = window.innerWidth;
+			var H = window.innerHeight;
+			
+			canvas.width = W;
+			canvas.height = H;
+			
+			var fontSize = 16;
+			
+			var colunms = Math.floor(W /fontSize);	
+			
+			var drops = [];
+			
+			for(var i=0;i<colunms;i++){
+				drops.push(0);
+			}
+
+			
+			var str ="javascript html5 canvas";
+			
+			function draw(){
+				context.fillStyle = "rgba(0,0,0,0.05)";
+				context.fillRect(0,0,W,H);
+				
+				context.font = "700 "+fontSize+"px  微软雅黑";
+				
+				context.fillStyle ="#00cc33";
+				
+				for(var i=0;i<colunms;i++){
+					var index = Math.floor(Math.random() * str.length);
+					var x = i*fontSize;
+					var y = drops[i] *fontSize;
+					context.fillText(str[index],x,y);
+					
+					if(y >= canvas.height && Math.random() > 0.99){
+						drops[i] = 0;
+					}
+					drops[i]++;
+				}
+			};
+
+			function randColor(){
+				var r = Math.floor(Math.random() * 256);
+				var g = Math.floor(Math.random() * 256);
+				var b = Math.floor(Math.random() * 256);
+				return "rgb("+r+","+g+","+b+")";
+			}
+
+			draw();
+			setInterval(draw,30);
+		};
+
+	</script>
+
+    <audio autoplay="" loop="">
+        <source src="song2.mp3">
+        <script>
+            var song = document.currentScript.parentElement;
+            song.volume = 0.12;
+			document.addEventListener("click", () => {
+				song.play();
+			});
+        </script>
+    </audio>
+
+
+<a href="index.html" class="glitch" data-glitch="Explore">Crystal Squad</a>
+
+<div class="inspect">
+    <h2>Inspect detected.</h2>
+</div>
+
+<div class="information">
+    <h3>Crystal Squad Information</h3>
+	<p>Welcome to the Crystal Squad website, I dunno how you managed to get here. Probably from a link, but alright.</p>
+	<p>	I, am 4m47hy57. The creator of Crystal Squad, and I made Crystal Squad to seperate the followers from the best. 
+		You, are probably reading this because you are a follower.</p>
+	<p>...</p>
+	<p>I wonder what brings you here, reading this page, probably in your head, wondering "what am I reading right now?"
+		You are reading information about Crystal Squad, dummy.
+	</p>
+	<p>There are ways to get into Crystal Squad, however. Whether you are worthy, is a different story. For I will probably never know who you are.</p>
+	<p>Crystal Squad has a set of trials to complete before you are accepted as one of the best, not just as a plain follower.
+		You will most likely fail, as none has ever passed the trials to date.
+	</p>
+	<p>...</p>
+	<p>We shall see.</p>
+	<p>- 4m47hy57</p>
+
+</div>
+
+
+   <div id="particles-js"></div>
+    <script src="particles.js"></script>
+    <script src="particles-config-information.js"></script>
+
+  </body>
+</html>

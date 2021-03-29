@@ -58,7 +58,7 @@
 */
 html {
   font-family: myFirstFont;
-  color: rgb(119, 0, 255);
+  color: #531e91;
 }
 
   canvas{
@@ -84,28 +84,52 @@ html {
   text-align: center;
   color: rgb(119, 0, 255);
   z-index: 10;
+  animation: glitch 3s ease-in-out infinite alternate;
   
 }
 
+.infobutton {
+  background-color: rgba(44, 44, 44, 0.459);
+  font-size: 40px;
+  line-height: 1;
+  font-weight: 700;
+  position:absolute;
+  top: 60%;
+  left: 50%;
+  margin: 10;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  text-decoration: none;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  z-index: 10;
 
+}
 
-@keyframes glitch {
-	0% {
-		transform: translate(0)
-	}
-	20% {
-		transform: translate(-5px, 5px)
-	}
-	40% {
-		transform: translate(-5px, -5px)
-	}
-	60% {
-		transform: translate(5px, 5px)
-	}
-	80% {
-		transform: translate(5px, -5px)
-	}
-	to {
-		transform: translate(0)
-	}
+.honorary {
+  background-color: rgba(44, 44, 44, 0.459);
+  font-size: 40px;
+  line-height: 1;
+  font-weight: 700;
+  position:absolute;
+  top: 67%;
+  left: 50%;
+  margin: 10;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  text-decoration: none;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  z-index: 10;
+
+}
+
+@-webkit-keyframes glitch {
+  from {
+    text-shadow: 0 0 05px #fff, 0 0 10px #fff, 0 0 20px #d0a0fd, 0 0 30px #d0a0fd, 0 0 500px #d0a0fd, 0 0 60px #d0a0fd, 0 0 70px #d0a0fd;
+  }
+  
+  to {
+    text-shadow: 0 0 10px #fff, 0 0 20px #cd4dff, 0 0 30px #cd4dff, 0 0 40px #cd4dff, 0 0 50px #cd4dff, 0 0 60px #cd4dff, 0 0 70px #cd4dff;
+  }
 }
