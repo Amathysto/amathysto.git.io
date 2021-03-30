@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="Honorable.css">
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+	<title>Crystal Squad</title>
+	
+  </head>
+
+  <body oncontextmenu="return false"> 
+  <!--
+      <p>
+		I don't know what to put here.
+
+		...
+
+		Some lizards can detach their tails if caught by surprise!
+		As a last-ditch attempt to escape from a predator, a lizard may choose to detach their tail from their body! Known as autonomy, this is a left-over reflex from their wild counterparts, who could use this as a way to escape.
+
+		This reflex remains to this day and is often observed by pet lizard owners in times of great stress. It can be seen in many species, including Bearded Dragons, and many species of Gecko!
+
+		If this happens to your pet, it many be an indicator that an event or events has pushed their stress levels over threshold. Not to worry, in time your pet’s tail will grow back!
+
+		What an interesting fact.
+	  
+	  - 4m47hy57. 
+
+	  </p> 
+  -->
+    <iframe id="audio" name="audio" src="silence.html" style="display:none"></iframe>
+
+	<style type="text/css">
+		body {
+			overflow: hidden;
+		}
+		canvas {
+			position: fixed;
+			top: 0;
+			left: 0;
+		}
+    </style>   
+    
+    <canvas id="c" width="1880" height="939"></canvas>
+
+		<script type="text/javascript">
+			var w = c.width = window.innerWidth;
+			var h = c.height = window.innerHeight;
+			var ctx = c.getContext('2d');
+				
+			var opts = {		      
+			color: '#fcba03',
+			cx: w / 2,
+			cy: h / 2,
+			};
+			
+			var tick = 0;
+			var lines = [];
+			var dieX = w / 2;
+			var dieY = h / 2;
+			var baseRad = Math.PI * 2 / 6;
+				
+			ctx.fillStyle = 'black';
+			ctx.fillRect( 0, 0, w, h );
+
+			function loop() 
+			{		  
+			window.requestAnimationFrame( loop );
+			
+			++tick;
+			
+			ctx.globalCompositeOperation = 'source-over';
+			ctx.shadowBlur = 0;
+			ctx.fillStyle = 'rgba(0,0,0,alp)'.replace( 'alp', .04 );
+			ctx.fillRect( 0, 0, w, h );
+			ctx.globalCompositeOperation = 'lighter';
+			
+			if( lines.length < 300 && Math.random() < 1 )
+				lines.push( new Line );
+			
+			lines.map( function( line ){ line.step(); } );
+			}
+
+			function Line()
+			{
+			this.reset();
+			}
+
+			Line.prototype.reset = function()
+			{
+			
+			this.x = 0;
+			this.y = 0;
+			this.addedX = 0;
+			this.addedY = 0;
+			this.rad = 0;
+
+				if(Math.random() < 0.5 ) 
+				{
+					
+					if(window.innerWidth <= 1024) 
+					{
+						this.x = 0;
+					} 
+
+					if(window.innerWidth > 1024 && window.innerWidth <= 1440) 
+					{
+						this.x = 6;
+					} 
+
+					if(window.innerWidth > 1440 && window.innerWidth <= 2560)  
+					{
+						this.x = 12;
+					}
+
+					if(window.innerWidth > 2560 && window.innerWidth <= 4000)  
+					{
+						this.x = 18;
+					}
+
+					if(window.innerWidth > 4000)  
+					{
+						this.x = 24;
+					}
+					
+				} 
+				else 
+				{
+					if(window.innerWidth <= 1024) 
+					{
+						this.x = 0;
+					} 
+
+					if(window.innerWidth > 1024 && window.innerWidth <= 1440) 
+					{
+						this.x = -6;
+					} 
+
+					if(window.innerWidth > 1440 && window.innerWidth <= 2560)  
+					{
+						this.x = -12;
+					}
+
+					if(window.innerWidth > 4000)  
+					{
+						this.x = -24;
+					}					
+				}		  
+			
+			this.lightInputMultiplier = .01 + .02 * Math.random();
+			
+			this.color = opts.color.replace( 'hue', tick * .07 );
+			this.cumulativeTime = 0;
+			
+			this.beginPhase();
+			}
+
+			Line.prototype.beginPhase = function()
+			{
+			
+
+
+			this.x += this.addedX;
+			this.y += this.addedY;
+			
+			this.time = 0;
+			this.targetTime = ( 10 + 10 * Math.random() ) | 0;
+			
+			this.rad += baseRad * ( Math.random() < .5 ? 1 : -1 );
+			this.addedX = Math.cos( this.rad );
+			this.addedY = Math.sin( this.rad );
+			
+			if( Math.random() < .01 || this.x > dieX || this.x < -dieX || this.y > dieY || this.y < -dieY )
+				this.reset();
+			}
+
+			Line.prototype.step = function()
+			{
+			
+			++this.time;
+			++this.cumulativeTime;
+			
+			if( this.time >= this.targetTime )
+				this.beginPhase();
+			
+			var prop = this.time / this.targetTime,
+				wave = Math.sin( prop * Math.PI / 2 ),
+				x = this.addedX * wave,
+				y = this.addedY * wave;
+			
+			ctx.shadowBlur = prop * 6;
+			ctx.fillStyle = ctx.shadowColor = this.color.replace( 'light', 50 + 10 * Math.sin( this.cumulativeTime * this.lightInputMultiplier ) );
+			ctx.fillRect( opts.cx + ( this.x + x ) * 45, opts.cy + ( this.y + y ) * 45, 2 , 2);
+			
+			if( Math.random() < .1 )
+				ctx.fillRect( opts.cx + ( this.x + x ) * 45 + Math.random() * 20 * ( Math.random() < .5 ? 1 : -1 ) - 2 / 2, opts.cy + ( this.y + y ) * 45 + Math.random() * 20 * ( Math.random() < .5 ? 1 : -1 ) - 2 / 2, 2, 2 )
+			}
+			loop();
+
+			window.addEventListener( 'resize', function(){
+			
+			w = c.width = window.innerWidth;
+			h = c.height = window.innerHeight;
+			ctx.fillStyle = 'black';
+			ctx.fillRect( 0, 0, w, h );
+			
+			opts.cx = w / 2;
+			opts.cy = h / 2;
+			
+			dieX = w / 2 / 45;
+			dieY = h / 2 / 45;
+
+			});
+
+				</script>
+
+    <audio autoplay="" loop="">
+        <source src="song3.mp3">
+        <script>
+            var song = document.currentScript.parentElement;
+            song.volume = 0.12;
+			document.addEventListener("click", () => {
+				song.play();
+			});
+        </script>
+    </audio>
+
+
+<a href="index.html" class="glitch" data-glitch="Explore">Crystal Squad</a>
+
+<div class="inspect">
+    <h2>Inspect detected.</h2>
+</div>
+
+<div class="amathyst">
+
+	<img src="anonythyst.png"
+	alt="Me."
+	width="350"
+	height="336">
+
+</div>
+
+<div class="information">
+    <h3>This is me, 4m47hy57.</h3>
+	<p>https://www.youtube.com/channel/UCHzOQj7oCJ2EAc17Z_-CgEg</p>
+	<p>https://osu.ppy.sh/users/12393311</p>
+	<p>https://steamcommunity.com/id/Amathystie</p>
+</div>
+
+   <div id="particles-js"></div>
+    <script src="particles.js"></script>
+    <script src="particles-config-honorable.js"></script>
+
+  </body>
+</html>
