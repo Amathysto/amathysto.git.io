@@ -82,7 +82,7 @@ html {
   margin: 0;
   text-decoration: none;
   text-align: center;
-  color: rgb(119, 0, 255);
+  color: #f8f8f8;
   z-index: 10;
   animation: glitch 3s ease-in-out infinite alternate;
   
