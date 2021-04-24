@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="WIP.css">
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+	<title>Crystal Squad</title>
+	
+  </head>
+  <body oncontextmenu="return false"> 
+  <!--
+      <p>
+	  What do you think you're doing looking back here huh? What's your business in snoopin around in ma stuff?
+	  Hm, I'm just kinda curious what made you have the thought process to come back here anyway. If you're really
+	  that curious on how I made the website, just look up some youtube tutorials, its not that hard.
+
+	  Unless you were just looking for a friend, then that can be arranged.. maybe.
+	  You wouldn't go around some secret national agency looking around for some secrets would you now.. (id hope)? Preferably,
+	  stop snoopin' around. I got business and research that needs to be done.
+	  
+	  - 4m47hy57. 
+
+	  </p> 
+  -->
+    <iframe id="audio" name="audio" src="silence.html" style="display:none"></iframe>
+
+	<style type="text/css">
+		body {
+			overflow: hidden;
+		}
+		canvas {
+			position: fixed;
+			top: 0;
+			left: 0;
+		}
+    </style>   
+    
+    <audio autoplay="" loop="">
+        <source src="WIP.mp3">
+        <script>
+            var song = document.currentScript.parentElement;
+            song.volume = 0.3;
+			document.addEventListener("click", () => {
+				song.play();
+			});
+        </script>
+    </audio>
+
+	<div class="wip">
+
+		<img src="WIP.gif"
+		alt="Me."
+		width="750"
+		height="720">
+	
+	</div>
+
+	<div class="information">
+		<h3>Come back later, this website is WIP.</h3>
+	</div>
+
+	<a href="index.html" class="glitch" data-glitch="Explore">Crystal Squad</a>
+
+  </body>
+</html>
