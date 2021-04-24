@@ -69,7 +69,7 @@ html {
 
   @font-face {
   font-family: myFirstFont;
-  src: url(hacked.ttf);
+  src: url(../hacked.ttf);
 }
 
 .glitch {
