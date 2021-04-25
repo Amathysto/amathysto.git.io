@@ -25,7 +25,7 @@ function loaded() {
 
 var x = 0;
 
-var titleText = ["C", "Cr", "Cry", "Crys", "Cryst", "Crysta" , "Crystal", "Crystal S", "Crystal Sq", "Crystal Squ", "Crystal Squa", "Crystal Squad", "", "Crystal Squad", "", "Crystal Squad"];
+var titleText = ["C", "Cr", "Cry", "Crys", "Cryst", "Crysta" , "Crystal", "Crystal S", "Crystal Sq", "Crystal Squ", "Crystal Squa", "Crystal Squad", "-", "Crystal Squad", "-", "Crystal Squad"];
 
 function loop_title() {
 
