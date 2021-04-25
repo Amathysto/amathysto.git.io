@@ -19,7 +19,7 @@ if (document.addEventListener) {
 
 function loaded() {
 
-    setInterval(loop, 600);
+    setInterval(loop_title, 600);
 
 }
 
@@ -27,7 +27,7 @@ var x = 0;
 
 var titleText = ["C", "Cr", "Cry", "Crys", "Cryst", "Crysta" , "Crystal", "Crystal S", "Crystal Sq", "Crystal Squ", "Crystal Squa", "Crystal Squad"];
 
-function loop() {
+function loop_title() {
 
     document.getElementsByTagName("title")[0].innerHTML = titleText[x++%titleText.length];
 
