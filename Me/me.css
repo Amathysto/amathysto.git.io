@@ -24,16 +24,17 @@
   }
 
   .information {
-    background-color: rgba(107, 59, 19, 0);
+    background-color: rgba(0, 0, 0, 0.616);
     position: absolute;
     margin: 0;
-    top: 50%;
-    left: 50%;
+    top: 54%;
+    left: 75%;
     font-size: 20px;
     text-align: center;
     transform: translate(-50%, -50%);
     color: white;
     z-index: 10;
+    border: 5px solid rgb(255, 255, 255);
 
   }
 
@@ -102,6 +103,23 @@ html {
   
 }
 
+.me {
+  font-size: 50px;
+  line-height: 1;
+  font-weight: 700;
+  position:absolute;
+  top: 20%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  text-decoration: none;
+  color: rgb(82, 0, 102);
+  z-index: 10;
+  animation: pain 3s ease-in-out infinite alternate;
+  
+}
+
+
 @-webkit-keyframes glitch {
   from {
     text-shadow: 0 0 05px #fff, 0 0 10px #fff, 0 0 20px #94ac93, 0 0 30px #94ac93, 0 0 500px #94ac93, 0 0 60px #94ac93, 0 0 70px #94ac93;
@@ -109,5 +127,15 @@ html {
   
   to {
     text-shadow: 0 0 10px #fff, 0 0 20px #454d44, 0 0 30px #454d44, 0 0 40px #454d44, 0 0 50px #454d44, 0 0 60px #454d44, 0 0 70px #454d44;
+  }
+}
+
+@-webkit-keyframes pain {
+  from {
+    text-shadow: 0 0 05px #fff, 0 0 10px #fff, 0 0 20px #ac93a6, 0 0 30px #ac93a6, 0 0 500px #ac93a6, 0 0 60px #ac93a6, 0 0 70px #ac93a6;
+  }
+  
+  to {
+    text-shadow: 0 0 10px #fff, 0 0 20px #4d444d, 0 0 30px #4d444d, 0 0 40px #4d444d, 0 0 50px #4d444d, 0 0 60px #4d444d, 0 0 70px #4d444d;
   }
 }
