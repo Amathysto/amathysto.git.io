@@ -96,8 +96,8 @@ html {
   position:fixed;
   top: 60%;
   left: 50%;
-  margin: 10;
   transform: translate(-50%, -50%);
+  margin: 10;
   margin: 0;
   text-decoration: none;
   text-align: center;
@@ -114,8 +114,26 @@ html {
   position:fixed;
   top: 67%;
   left: 50%;
-  margin: 10;
   transform: translate(-50%, -50%);
+  margin: 10;
+  margin: 0;
+  text-decoration: none;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  z-index: 10;
+
+}
+
+.aboutme {
+  background-color: rgba(44, 44, 44, 0.459);
+  font-size: 40px;
+  line-height: 1;
+  font-weight: 700;
+  position:fixed;
+  top: 74%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 10;
   margin: 0;
   text-decoration: none;
   text-align: center;
