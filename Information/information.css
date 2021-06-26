@@ -76,6 +76,11 @@ html {
   
 }
 
+a:hover {
+  color: #91ff0091;
+  text-decoration: none;
+}
+
 @-webkit-keyframes glitch {
   from {
     text-shadow: 0 0 05px #fff, 0 0 10px #fff, 0 0 20px #b6fda0, 0 0 30px #b6fda0, 0 0 500px #b6fda0, 0 0 60px #b6fda0, 0 0 70px #b6fda0;

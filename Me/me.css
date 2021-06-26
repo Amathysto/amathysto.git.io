@@ -121,6 +121,11 @@ html {
   
 }
 
+a:hover {
+  color: #00ff4c62;
+  text-decoration: none;
+}
+
 
 @-webkit-keyframes glitch {
   from {
