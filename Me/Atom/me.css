@@ -1,0 +1,151 @@
+#particles-js {
+  position: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index:-10;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+  .inspect {
+  background-color:rgba(0, 0, 0, 0);
+  position: absolute;
+  margin: 0;
+  top: 10%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 120px;
+  color: red;
+  font-size: 30px;
+  }
+
+  .image {
+    z-index: -11;
+  }
+
+  .information {
+    background-color: rgba(0, 0, 0, 0.616);
+    position: absolute;
+    margin: 0;
+    top: 48%;
+    left: 50%;
+    font-size: 1.1vw;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    color: white;
+    z-index: 10;
+    border: 5px solid rgb(255, 255, 255);
+    background-attachment: fixed;
+
+  }
+
+  .information1 {
+    background-color: rgba(107, 59, 19, 0);
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    left: 20%;
+    font-size: 20px;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    color: white;
+    z-index: 10;
+    
+
+  }
+
+  .information2 {
+    background-color: rgba(107, 59, 19, 0);
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    left: 80%;
+    font-size: 20px;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    color: white;
+    z-index: 10;
+
+  }
+
+/*
+	#intro >* {
+	  font-family: myFirstFont;
+	  color: #0f0;
+}
+*/
+html {
+  font-family: myFirstFont;
+  color: #916d1e;
+}
+
+  canvas{
+  display:block;
+  vertical-align:bottom;
+}
+
+  @font-face {
+  font-family: myFirstFont;
+  src: url(../../hacked.ttf);
+}
+
+.glitch {
+  font-size: 4vw;
+  line-height: 1;
+  font-weight: 700;
+  position:absolute;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  text-decoration: none;
+  color: rgb(49, 0, 112);
+  z-index: 10;
+  animation: glitch 3s ease-in-out infinite alternate;
+  
+}
+
+.me {
+  font-size: 2.7vw;
+  line-height: 1;
+  font-weight: 700;
+  position:absolute;
+  top: 19%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  text-decoration: none;
+  color: rgb(119, 0, 255);
+  z-index: 10;
+  animation: pain 3s ease-in-out infinite alternate;
+  
+}
+
+a:hover {
+  color: #ff00ee60;
+  text-decoration: none;
+}
+
+@-webkit-keyframes glitch {
+  from {
+    text-shadow: 0 0 05px #fff, 0 0 10px #fff, 0 0 20px #c6a7ff, 0 0 30px #c6a7ff, 0 0 500px #c6a7ff, 0 0 60px #c6a7ff, 0 0 70px #c6a7ff;
+  }
+  
+  to {
+    text-shadow: 0 0 10px #fff, 0 0 20px #584679, 0 0 30px #584679, 0 0 40px #584679, 0 0 50px #584679, 0 0 60px #584679, 0 0 70px #584679;
+  }
+}
+
+@-webkit-keyframes pain {
+  from {
+    text-shadow: 0 0 05px #fff, 0 0 10px #fff, 0 0 20px #ac93a6, 0 0 30px #ac93a6, 0 0 500px #ac93a6, 0 0 60px #ac93a6, 0 0 70px #ac93a6;
+  }
+  
+  to {
+    text-shadow: 0 0 10px #fff, 0 0 20px #4d444d, 0 0 30px #4d444d, 0 0 40px #4d444d, 0 0 50px #4d444d, 0 0 60px #4d444d, 0 0 70px #4d444d;
+  }
+}
