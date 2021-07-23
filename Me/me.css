@@ -139,6 +139,7 @@ html {
 a:hover {
   color: #00ff4c00;
   text-decoration: none;
+  transition: 0.2s
 }
 
 
