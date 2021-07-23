@@ -10,6 +10,13 @@
   background-repeat: no-repeat;
 }
 
+.vida {
+  background-size: cover;
+  transform: translate(5%, 5%);
+  width: 90%;
+  height: 90%;
+}
+
   .inspect {
   background-color:rgba(0, 0, 0, 0);
   position: absolute;
