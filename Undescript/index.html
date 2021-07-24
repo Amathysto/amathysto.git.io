@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css">
+	<link rel="shortcut icon" type="image/x-icon" href="../favicon.ico" />
+	<script src="../code/security.js"></script>
+	<script src="../code/title.js"></script>
+	<title>Crystal Squad</title>
+	<meta charset="utf-8"/>
+	<meta property="og:title" content="Welcome to Crystal Squad" />
+	<meta property="og:locale" content="en_US" />
+	<meta name="description" content="Crystal Squad" />
+	<meta property="og:description" content="Welcome to the Crystal Squad." />
+	<meta property="og:site_name" content="Crystal Squad" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+	
+  </head>
+  <body oncontextmenu="return false"> 
+  <!--
+      <p>
+	  What do you think you're doing looking back here huh? What's your business in snoopin around in ma stuff?
+	  Hm, I'm just kinda curious what made you have the thought process to come back here anyway. If you're really
+	  that curious on how I made the website, just look up some youtube tutorials, its not that hard.
+
+	  Unless you were just looking for a friend, then go on omegle or something instead of looking on my site.
+	  You wouldn't go around some secret national agency looking around for some secrets would you now.. (id hope)? Preferably,
+	  stop snoopin' around. I got business and research that needs to be done.
+	  
+	  - 4m47hy57. 
+
+	  </p> 
+  -->
+	<style type="text/css">
+		body {
+			margin: 0;
+			overflow: hidden;
+		}
+		canvas {
+			position: fixed;
+			top: 0;
+			left: 0;
+		}
+		html {
+  			height: 100%;
+  			background: radial-gradient(ellipse at bottom, #191222 0%, #020303 100%);
+			position: fixed;
+			z-index: 20;
+		}
+
+    </style>   
+
+
+
+    <canvas id="c" width="1880" height="939"></canvas>
+
+<iframe id="audio" name="audio" src="silence.mp3" style="display:none"></iframe>
+
+
+    <audio autoplay="" loop="">
+        <source src="song.mp3">
+        <script>
+            var song = document.currentScript.parentElement;
+            song.volume = 0.21;
+			document.addEventListener("click", () => {
+				song.play();
+			});
+        </script>
+    </audio>
+
+	
+
+<a class="glitch" data-glitch="Explore">Crystal Squad</a>
+
+<link rel='stylesheet' href="stars.css">
+<div id='stars'></div>
+<div id='stars2'></div>
+<div id='stars3'></div>
+<div id='title'>
+</div>
+
+  </body>
+</html>

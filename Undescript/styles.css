@@ -1,0 +1,85 @@
+
+	#intro {
+	background-color:#0008;
+	position: absolute;
+	margin: 0;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 50%;
+	height: 120px;
+	text-align: center;
+	}
+
+	#comesoon {
+	background-color:#0008;
+	position: absolute;
+	margin: 0;
+	top: 80%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 30%;
+	height: 120px;
+	text-align: center;
+  }
+  
+  .inspect {
+  background-color:rgba(0, 0, 0, 0);
+  position: absolute;
+  margin: 0;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 120px;
+  text-align: center;
+  color: red;
+  font-size: 30px;
+  }
+
+
+
+/*
+	#intro >* {
+	  font-family: myFirstFont;
+	  color: #0f0;
+}
+*/
+html {
+  font-family: myFirstFont;
+  color: #531e91;
+}
+
+  @font-face {
+  font-family: myFirstFont;
+  src: url(../hacked.ttf);
+}
+
+.glitch {
+  font-size: 130px;
+  line-height: 1;
+  font-weight: 700;
+  position:fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  text-decoration: none;
+  text-align: center;
+  color: #313131;
+  z-index: 10;
+  animation: glitch 3s ease-in-out infinite alternate;
+  
+}
+
+
+
+@-webkit-keyframes glitch {
+  from {
+    text-shadow: 0 0 05px #fff, 0 0 10px #fff, 0 0 20px #a8a8a8, 0 0 30px #a8a8a8, 0 0 500px #a8a8a8, 0 0 60px #a8a8a8, 0 0 70px #a8a8a8;
+  }
+  
+  to {
+    text-shadow: 0 0 10px #fff, 0 0 20px #9d9c9e, 0 0 30px #9d9c9e, 0 0 40px #9d9c9e, 0 0 50px #9d9c9e, 0 0 60px #9d9c9e, 0 0 70px #9d9c9e;
+  }
+}
