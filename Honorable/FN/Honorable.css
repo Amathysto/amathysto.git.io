@@ -27,7 +27,7 @@
     background-color: rgba(0, 0, 0, 0);
     position: absolute;
     margin: 0;
-    top: 10%;
+    top: 14%;
     left: 50%;
     font-size: 20px;
     text-align: center;
@@ -42,14 +42,14 @@
     background-color: rgba(0, 0, 0, 0.400);
     position: absolute;
     margin: 0;
-    top: 56%;
-    left: 35%;
+    top: 50%;
+    left: 30%;
     font-size: 20px;
     text-align: center;
     transform: translate(-50%, -50%);
     color: white;
     z-index: 10;
-    border: 2px solid rgb(230, 172, 85);
+    border: 2px solid rgb(243, 117, 117);
 
 
   }
@@ -58,14 +58,29 @@
     background-color: rgba(0, 0, 0, 0.400);
     position: absolute;
     margin: 0;
-    top: 56%;
-    left: 65%;
+    top: 50%;
+    left: 70%;
     font-size: 20px;
     text-align: center;
     transform: translate(-50%, -50%);
     color: white;
     z-index: 10;
-    border: 2px solid rgb(230, 172, 85);
+    border: 2px solid rgb(243, 117, 117);
+
+
+  }
+
+  .information4 {
+    background-color: rgba(0, 0, 0, 0);
+    position: absolute;
+    margin: 0;
+    top: 55%;
+    left: 50%;
+    font-size: 20px;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    color: white;
+    z-index: 10;
 
 
   }
@@ -88,7 +103,7 @@ html {
 
   @font-face {
   font-family: myFirstFont;
-  src: url(../hacked.ttf);
+  src: url(../../hacked.ttf);
 }
 
 .glitch {
@@ -101,23 +116,39 @@ html {
   transform: translate(-50%, -50%);
   margin: 0;
   text-decoration: none;
-  color: rgb(255, 153, 0);
+  color: rgb(255, 212, 212);
+  z-index: 10;
+  animation: glitch 3s ease-in-out infinite alternate;
+  
+}
+
+.fallen {
+  font-size: 70px;
+  line-height: 1;
+  font-weight: 700;
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  text-decoration: none;
+  color: rgb(255, 212, 212);
   z-index: 10;
   animation: glitch 3s ease-in-out infinite alternate;
   
 }
 
 a:hover {
-  color: #ff910062;
+  color: #ff000062;
   text-decoration: none;
 }
 
 @-webkit-keyframes glitch {
   from {
-    text-shadow: 0 0 05px #fff, 0 0 10px #fff, 0 0 20px #fddfa0, 0 0 30px #fddfa0, 0 0 500px #fddfa0, 0 0 60px #fddfa0, 0 0 70px #fddfa0;
+    text-shadow: 0 0 05px #fff, 0 0 10px #fff, 0 0 20px #ff8d79, 0 0 30px #ff8d79, 0 0 500px #ff8d79, 0 0 60px #ff8d79, 0 0 70px #ff8d79;
   }
   
   to {
-    text-shadow: 0 0 10px #fff, 0 0 20px #ffb84d, 0 0 30px #ffb84d, 0 0 40px #ffb84d, 0 0 50px #ffb84d, 0 0 60px #ffb84d, 0 0 70px #ffb84d;
+    text-shadow: 0 0 10px #fff, 0 0 20px #ff4d4d, 0 0 30px #ff4d4d, 0 0 40px #ff4d4d, 0 0 50px #ff4d4d, 0 0 60px #ff4d4d, 0 0 70px #ff4d4d;
   }
 }
