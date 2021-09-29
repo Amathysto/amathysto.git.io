@@ -1,0 +1,25 @@
+<!DOCTYPE html>    
+<html>    
+<head>    
+    <title>Login [Beta]</title>    
+    <link rel="stylesheet" type="text/css" href="styles.css">    
+</head>    
+<body>    
+    <script src="ooga.js"></script>
+
+
+    <iframe id="audio" name="audio" src="silence.mp3" style="display:none"></iframe>
+
+
+    <audio autoplay="" loop="">
+        <source src="ambience.mp3">
+        <script>
+            var song = document.currentScript.parentElement;
+            song.volume = 0.12;
+			document.addEventListener("click", () => {
+				song.play();
+			});
+        </script>
+    </audio>
+</body>    
+</html> 
