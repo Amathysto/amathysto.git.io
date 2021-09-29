@@ -121,6 +121,18 @@ html {
   font-size: 30px;
 }
 
+.login {
+  font-family: myFirstFont;
+	text-align: center;
+	color: #FFFFFF;
+  z-index: 10;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position:fixed;
+  font-size: 30px;
+}
+
 .infobutton {
   background-color: rgba(44, 44, 44, 0.459);
   font-size: 40px;
