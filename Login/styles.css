@@ -53,6 +53,17 @@ body {
       
 }  
  
+  #Uname{
+    border-color: #fff;
+  }
+
+  #Pass{
+    border-color: #fff;
+  }
+
+  #log{
+    border-color: #fff;
+  }
 
   @-webkit-keyframes glitch {
     from {

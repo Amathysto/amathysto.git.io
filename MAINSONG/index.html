@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="Racist.css">
+        <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico" />
+        <title>Crystal Squad</title>
+    </head>
+
+    <body oncontextmenu="return false"> 
+          <!--<p>
+            Yeah, It's the main song.
+
+            Here's the video for it lul.
+
+          - 4m47hy57. 
+          </p>-->
+
+	    <video class="vida" loop autoplay id="video">
+            <source src="Race.mp4" type="video/mp4" id="videosource">
+            <script>
+                var video = document.currentScript.parentElement;
+                video.volume = 0.2;
+                
+                function start_video () {
+                    video.play();
+                }
+                
+                document.body.addEventListener("click", start_video);
+                document.body.addEventListener("touchstart", start_video);
+            </script>
+        </video>
+
+        <style type="text/css">
+            body {
+                overflow: hidden;
+                background-color: black;
+            }
+            canvas {
+                position: fixed;
+                top: 0;
+                left: 0;
+            }
+        </style>   
+
+        <canvas id="c" width="1880" height="939"></canvas>
+        <a href="../" class="glitch" data-glitch="Explore">Crystal Squad</a>
+        
+        <!-- Run scripts at end once page is loaded -->
+        <script src="../code/security.js"></script>
+        <script src="../code/title.js"></script>
+        <!--<script src="Race.js"></script>-->
+    </body>
+</html>
